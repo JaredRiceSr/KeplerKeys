@@ -117,7 +117,7 @@ Example:
 
 Result:
 
-```shell
+```js
 Uint8Array [
   138,
   81,
