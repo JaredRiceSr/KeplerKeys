@@ -28,7 +28,7 @@ $ npm i kepler-keys
 ```js
 var kKey = require("kepler-keys");
 
-var goKepler = keplerKey.gen();
+var goKepler = kKey.goKep();
 
 console.log(goKepler);
 ```
@@ -234,9 +234,9 @@ Verifies and decrypts a previously encrypted message.
 
 Example:
 ```js
-var kSigKey1 = "4bMnc36WuLYJqsWTZtiazJJrtkvPwgyWnirn7gKk7ium";
-var kSigKey2 = "516mChDX1BRjwHJc2w838W8cXxy8a6Eb35HKXjPR2fD8";
-var kSigKey3 = "7H25Jfb2ND51hhaomL5FPhhqQvBGujd1jJeSjZZ8HQzR";
+var kSigKey1 = "86kefAkSMwkoxVgdAcR6oJMihyEbh6tjpLiccp2tsyzH";
+var kSigKey2 = "8NkBTbsB2wRN37gqZqyBdcQjfEtFjGMTdj9tZHrpJTTL";
+var kSigKey3 = "xC9ufU5zsfuSED7VzLbsq15VA8xpJsv5zk21aCkoNzF";
 
 var keyPair1 = kID.getKeyPairFromSignKey(kSigKey1);
 var keyPair2 = kID.getKeyPairFromSignKey(kSigKey2);
