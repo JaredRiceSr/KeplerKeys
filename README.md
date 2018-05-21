@@ -6,10 +6,11 @@
 # KeplerKeys
 Kepler's Key Generation Library
 
-[![build status](https://secure.travis-ci.org/benchlab/keplerkeys.svg)](https://travis-ci.org/benchlab/keplerkeys)
+[![build status](https://secure.travis-ci.org/benchlab/KeplerKeys
+.svg)](https://travis-ci.org/benchlab/KeplerKeys
+)
 
-
-node.js module to generate Kepler IDs and Ed25519-based Kepler keys to use with [Kepler](https://github.com/benchlab/Kepler).
+Javascript Library for generating Kepler IDs and Ed25519-based Kepler keys to use with [Kepler](https://github.com/benchlab/Kepler).
 
 
 ## Install
