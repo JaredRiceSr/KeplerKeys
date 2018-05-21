@@ -2,9 +2,9 @@ var nacl = require("tweetnacl");
 var bs58 = require("bs58");
 
 
-var fromKSeed = function (kSeed) {
+var fromSeed = function (kSeed) {
 
-    var KepX = nacl.sign.keyPair.fromKSeed(kSeed);
+    var KepX = nacl.sign.keyPair.fromSeed(kSeed);
     var secKey = KepX.secretKey.subarray(0, 32);
     var kSigKey = bs58.encode(secretKey);
     var keyPair = nacl.box.keyPair.fromSecretKey(secretKey);
@@ -67,9 +67,9 @@ var encryptMessage = function (message, kNonce, sharedSecret) {
 module.exports = {
     goKep: function () {
         var kSeed = nacl.randomBytes(nacl.sign.seedLength);
-        return fromKSeed(kSeed);
+        return fromSeed(kSeed);
     },
-    fromKSeed: fromKSeed,
+    fromSeed: fromSeed,
     signMessage: signMessage,
     verifySignedMessage: verifySignedMessage,
     getKeyPairFromSignKey: getKeyPairFromSignKey,
@@ -78,4 +78,3 @@ module.exports = {
     encryptMessage: encryptMessage,
     getKNonce: getKNonce,
 };
-
