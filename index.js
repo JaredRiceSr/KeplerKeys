@@ -7,7 +7,7 @@ var fromSeed = function (kSeed) {
     var KepX = nacl.sign.keyPair.fromSeed(kSeed);
     var secKey = KepX.secretKey.subarray(0, 32);
     var kSigKey = bs58.encode(secKey);
-    var keyPair = nacl.box.keyPair.fromSecretKey(secretKey);
+    var keyPair = nacl.box.keyPair.fromSecretKey(secKey);
 
     return {
 
