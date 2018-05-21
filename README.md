@@ -142,18 +142,84 @@ Returns a key pair that is valid to use for encrypting.
 
 Example:
 ```js
+var kID = require("kepler-keys");
+
 var kKeys = kID.goKep();
 var kSigKey = kKeys.secret.kSigKey;
-var kKeyPair = kID.getKeplerKeyPairFromSigKey(kSigKey);
+var kKeyPair = kID.getKeyPairFromSignKey(kSigKey);
 console.log(kKeyPair);
 ```
 
 Output:
 ```js
-{
-   universalKey: ...   // Uint8Array with 32-byte Kepler public key
-   secretKey: ...   // Uint8Array with 32-byte Kepler secret key
-}
+{ uniKey: 
+   Uint8Array [
+     50,
+     111,
+     225,
+     48,
+     221,
+     247,
+     136,
+     248,
+     1,
+     33,
+     161,
+     20,
+     22,
+     108,
+     219,
+     254,
+     152,
+     95,
+     17,
+     245,
+     241,
+     168,
+     189,
+     117,
+     200,
+     251,
+     175,
+     40,
+     89,
+     223,
+     3,
+     84 ],
+  secKey: 
+   Uint8Array [
+     105,
+     239,
+     239,
+     152,
+     27,
+     246,
+     151,
+     16,
+     29,
+     94,
+     193,
+     138,
+     215,
+     178,
+     239,
+     89,
+     198,
+     113,
+     112,
+     212,
+     43,
+     147,
+     234,
+     160,
+     158,
+     105,
+     215,
+     160,
+     104,
+     228,
+     36,
+     129 ] }
 ```
 
 
