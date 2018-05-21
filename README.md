@@ -206,8 +206,8 @@ Example:
 var k1 = kID.gen();
 var k2 = kID.gen();
 
-var signKey1 = sovrin1.secret.signKey;
-var signKey2 = sovrin2.secret.signKey;
+var signKey1 = k1.secret.signKey;
+var signKey2 = k2.secret.signKey;
 
 var keyPair1 = kID.getKeyPairFromSignKey(kSigKey1);
 var keyPair2 = kID.getKeyPairFromSignKey(kSigKey2);
