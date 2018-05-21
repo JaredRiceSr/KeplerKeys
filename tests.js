@@ -2,11 +2,11 @@ var test = require("tape");
 var nacl = require("tweetnacl");
 var kID = require("./");
 
-test("kID.fromKSeed(kSeed)", function(t){
+test("kID.fromSeed(kSeed)", function(t){
 
     var tst = function(seed_hex, expected){
         var kSeed = Buffer.from(seed_hex, "hex");
-        var r = kID.fromKSeed(kSeed);
+        var r = kID.fromSeed(kSeed);
         t.deepEquals(r, expected);
     };
 
@@ -70,7 +70,7 @@ test("kID.goKep()", function(t){
     var g1 = kID.goKep();
     var kSeed = Buffer.from(g1.secret.kSeed, "hex");
 
-    t.deepEquals(kID.fromKSeed(kSeed), g1, "goKep should just wrap .fromKSeed(kSeed)");
+    t.deepEquals(kID.fromSeed(kSeed), g1, "goKep should just wrap .fromSeed(kSeed)");
 
     t.notEquals(g1.secret.kSeed, kID.goKep().secret.kSeed);
     t.notEquals(g1.secret.kSeed, kID.goKep().secret.kSeed);
