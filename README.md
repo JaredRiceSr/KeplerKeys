@@ -6,9 +6,7 @@
 # KeplerKeys
 Kepler's Key Generation Library
 
-[![build status](https://secure.travis-ci.org/benchlab/KeplerKeys
-.svg)](https://travis-ci.org/benchlab/KeplerKeys
-)
+[![Build Status](https://travis-ci.com/benchlab/KeplerKeys.svg?branch=master)](https://travis-ci.com/benchlab/KeplerKeys)
 
 Javascript Library for generating Kepler IDs and Ed25519-based Kepler keys to use with [Kepler](https://github.com/benchlab/Kepler).
 
