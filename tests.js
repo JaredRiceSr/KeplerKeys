@@ -159,7 +159,7 @@ test("kID.encryptMessage(message, kNonce, sharedSecret)", function (t) {
     var sharedSecret1To2 = kID.getSharedSecret(keyPair2.publicKey, keyPair1.secretKey);
 
     var message = "Hello World!!";
-    var kNonce = kID.getNonce();
+    var kNonce = kID.getKNonce();
     var encryptedMessage = kID.encryptMessage(message, kNonce, sharedSecret1To2);
 
     t.notEqual(message, encryptedMessage);
