@@ -11,17 +11,22 @@ Kepler's Key Generation Library
 Javascript Library for generating Kepler IDs and Ed25519-based Kepler keys to use with [Kepler](https://github.com/benchlab/Kepler).
 
 
-## Install
+## Install With Yarn
+
+```sh
+$ yarn add kepler-keys
+```
+
+## Install With NPM
 
 ```sh
 $ npm i kepler-keys
 ```
 
-
 ## Example
 
 ```js
-var kKey = require("keplercrypto");
+var kKey = require("kepler-keys");
 
 var goKepler = keplerKey.gen();
 
