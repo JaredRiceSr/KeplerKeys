@@ -270,6 +270,7 @@ benOS has many components that make the wheels turn. Below are a list of those c
   - [Kepler-CLI](https://github.com/benchlab/Kepler-CLI) - Kepler's Official Command Line Client <br>
   - [KeplerUUID](https://github.com/benchlab/KeplerUUID) - Kepler's UUID Javascript Library <br>
   - [KeplerKeys](https://github.com/benchlab/KeplerKeys) - Key Generation Javascript Library For Kepler <br>
+
 [Designate](https://github.com/benchlab/designate) - Global Decentralized Naming Service For The Bench Network <br>
 [Flutter](https://github.com/benchlab/flutter) - Global Decentralized Image Service For The Bench Network <br>
 [Neutron](https://github.com/benchlab/neutron) - Global Network Creation & Management For The Bench Network <br>
