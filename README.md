@@ -65,7 +65,7 @@ Generates a new KeplerID, Kepler VKey, Kepler SigKey, and also gives you the Kep
 ```
 
 
-### fromKSeed(seed)
+### fromSeed(seed)
 
 Same as `.goKep()` except you supply the Kepler seed. The seed should be a 32-byte Uint8Array (i.e. Buffer).
 
@@ -78,6 +78,18 @@ var goKepler = kKey.fromKSeed(seed);
 console.log(d);
 ```
 
+Result:
+
+```shell
+{ kID: '7v4wYLQLoWYc8UzqWn5t5T',
+  kVKey: '4mbYnygwKEvwSWXoDeFWpSAZWcmst7HUkTzTPAV749KY',
+  uniKey: 'EL9GJAxDbf86cqZAZ8ySH8Q7hkXkhB1FBSAodKcvU6fS',
+  secret: 
+   { kSeed: '0e238e4f6589893e32ac1b84e17e32acd4c510f5c5587462d40b0702b638f4ec',
+     kSigKey: 'xC9ufU5zsfuSED7VzLbsq15VA8xpJsv5zk21aCkoNzF',
+     secKey: 'xC9ufU5zsfuSED7VzLbsq15VA8xpJsv5zk21aCkoNzF' } }
+```
+
 The output is the same as the `.goKep()` example.
 
 
@@ -86,7 +98,7 @@ The output is the same as the `.goKep()` example.
 Signs a message with the given kSigKey and kVKey.
 
 * The message should be a string.
-* Both the kSigKey and kVKey should be the kSigKey and kVKey given from the `goKep()` or `fromKSeed(seed)` methods
+* Both the kSigKey and kVKey should be the kSigKey and kVKey given from the `goKep()` or `fromSeed(seed)` methods
 
 Returns a signed message as a Uint8Array (i.e. Buffer).
 
@@ -98,9 +110,95 @@ Example:
   var kVKey = kKey.kVKey;
   var message = "One giant step.";
  
-  var signedMessage = kID.signMessage(message, sigKey, vKey);
+  var signedMessage = kID.signMessage(message, kSigKey, kVKey);
+  
+  console.log(signedMessage);
 ```
 
+Result:
+
+```shell
+Uint8Array [
+  138,
+  81,
+  246,
+  216,
+  169,
+  233,
+  24,
+  198,
+  215,
+  169,
+  186,
+  1,
+  91,
+  69,
+  248,
+  185,
+  254,
+  241,
+  186,
+  87,
+  62,
+  75,
+  236,
+  20,
+  215,
+  204,
+  125,
+  45,
+  17,
+  186,
+  125,
+  227,
+  155,
+  60,
+  220,
+  181,
+  200,
+  227,
+  246,
+  24,
+  153,
+  214,
+  131,
+  49,
+  238,
+  182,
+  242,
+  156,
+  161,
+  115,
+  173,
+  163,
+  180,
+  81,
+  9,
+  1,
+  85,
+  196,
+  121,
+  185,
+  17,
+  180,
+  73,
+  2,
+  79,
+  110,
+  101,
+  32,
+  103,
+  105,
+  97,
+  110,
+  116,
+  32,
+  115,
+  116,
+  101,
+  112,
+  46 ]
+```
 
 ### verifySignedMessage(signedMessage, kVKey)
 
@@ -232,6 +330,35 @@ Example:
 var kepNonce = kID.getKNonce();
 ```
 
+Results:
+
+```shell
+Uint8Array [
+  162,
+  147,
+  161,
+  66,
+  195,
+  246,
+  249,
+  163,
+  54,
+  194,
+  74,
+  56,
+  93,
+  6,
+  136,
+  216,
+  78,
+  230,
+  31,
+  131,
+  101,
+  9,
+  233,
+  83 ]
+  ```
 
 ### getSharedSecret(theirKVKey, myKSigKey)
 
@@ -293,7 +420,7 @@ var encryptedMessage = kID.encryptMessage(message, kNonce, sharedSecret1To2);
 
 Verifies and decrypts a previously encrypted message.
 * encryptedMessage should be what is returned from the `encryptMessage(message, nonce, sharedSecret)` method
-* nonce should be a nonce given from the `getNonce()` method
+* nonce should be a nonce given from the `getKNonce()` method
     * Note: The nonce used for encrypting and decrypting need to be the same
 * sharedSecret should be computed using the `getSharedSecret(theirVerifyKey, mySigningKey)` method
 
