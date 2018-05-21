@@ -34,13 +34,13 @@ console.log(goKepler);
 ```
 output:
 ```js
-{ kID: 'S7evWWTSbaXELyE9w53sFr',
-  kVKey: 'EgvhZsLKSsqsbNBfJ2wfR9FFWo9YqkpxpfXeT4ifR1Cq',
-  kUniKey: '5UAXeov4Gi7ioSTLDoMPtdvqX6RRmJcQAWagVgdaxUej',
-  secret:
-   { kSeed: '36a572a7e43956784b517c57b26720a8ef838d114c0619f1d8c7801c37fa4f6a',
-     kSigKey: '4gKLe7Qq2WX249NBfymQySZbAzXboq2emMig6wBR82Bj',
-     kSecretKey: '7H25Jfb2ND51hhaomL5FPhhqQvBGujd1jJeSjZZ8HQzR'} }
+{ kID: '7v4wYLQLoWYc8UzqWn5t5T',
+  kVKey: '4mbYnygwKEvwSWXoDeFWpSAZWcmst7HUkTzTPAV749KY',
+  uniKey: 'EL9GJAxDbf86cqZAZ8ySH8Q7hkXkhB1FBSAodKcvU6fS',
+  secret: 
+   { kSeed: '0e238e4f6589893e32ac1b84e17e32acd4c510f5c5587462d40b0702b638f4ec',
+     kSigKey: 'xC9ufU5zsfuSED7VzLbsq15VA8xpJsv5zk21aCkoNzF',
+     secKey: 'xC9ufU5zsfuSED7VzLbsq15VA8xpJsv5zk21aCkoNzF' } }
 ```
 
 ## KeplerKeys API
@@ -71,7 +71,7 @@ Same as `.goKep()` except you supply the Kepler seed. The seed should be a 32-by
 
 Example:
 ```
-var seed = Buffer.from("36a572a7e43956784b517c57b26720a8ef838d114c0619f1d8c7801c37fa4f6a", "hex");
+var seed = Buffer.from("0e238e4f6589893e32ac1b84e17e32acd4c510f5c5587462d40b0702b638f4ec", "hex");
 
 var goKepler = kKey.fromKSeed(seed);
 
