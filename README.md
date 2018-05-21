@@ -138,7 +138,7 @@ Output:
 ### getKeyPairFromSignKey(keplerSigKey)
 
 Returns a key pair that is valid to use for encrypting. 
-* The keplerSigKey should be the keplerSigKey given from the object given from `goKep()` or `fromKeplerSeed()`
+* The kSigKey should be the kSigKey given from the object given from `goKep()` or `fromKSeed()`
 
 Example:
 ```js
@@ -237,8 +237,8 @@ var kepNonce = kID.getKNonce();
 
 Computes a sharedSecret to be used for encryption.
 
-* theirKVKey should be the publicKey given from the `getKeyPairFromSigKey(kSigKey)` method or the uniKey string given from the `goKep()` method.
-* myKSigKey should be the secretKey given from the `getKeyPairFromSigKey(kSigKey)` method or the secKey given from the `goKep()` method.
+* theirKVKey should be the publicKey given from the `getKeyPairFromSignKey(kSigKey)` method or the uniKey string given from the `goKep()` method.
+* myKSigKey should be the secretKey given from the `getKeyPairFromSignKey(kSigKey)` method or the secKey given from the `goKep()` method.
 
 Example:
 ```js
