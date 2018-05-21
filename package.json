@@ -1,0 +1,37 @@
+{
+  "name": "kepler-keys",
+  "version": "1.0.0",
+  "description": "Kepler's Javascript-based Cryptography Library For The Bench Network.",
+  "main": "index.js",
+  "scripts": {
+    "start": "onchange -i *.js -- npm test -s",
+    "test": "node tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benchlab/KeplerKeys.git"
+  },
+  "keywords": [
+    "bench-network",
+    "bench-crypto",
+    "bench-cryptography",
+    "bench-signatures",
+    "ed25519",
+    "bench-identity",
+    "kepler-service"
+  ],
+  "author": "Jared Rice Sr.",
+  "license": "BENCH",
+  "bugs": {
+    "url": "https://github.com/benchlab/KeplerKeys/issues"
+  },
+  "homepage": "https://github.com/benchlab/KeplerKeys#readme",
+  "devDependencies": {
+    "onchange": "^3.2.1",
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "bs58": "^4.0.1",
+    "tweetnacl": "^1.0.0"
+  }
+}
