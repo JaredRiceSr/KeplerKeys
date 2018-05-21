@@ -176,10 +176,10 @@ Computes a sharedSecret to be used for encryption.
 
 Example:
 ```js
-var k1 = kID.gen();
-var k2 = kID.gen();
+var k1 = kID.goKep();
+var k2 = kID.goKep();
 
-// Using the strings given via the gen() method
+// Using the strings given via the goKep() method
 var sharedSecret1 = kID.getSharedSecret(k2.UniKey, k1.secret.SecKey);
 var sharedSecret2 = kID.getSharedSecret(k1.UniKey, k2.secret.SecKey);
 
@@ -193,7 +193,6 @@ var keyPair2 = kID.getKeyPairFromSignKey(kSigKey2);
 var sharedSecret3 = kID.getSharedSecret(keyPair2.uniKey, keyPair1.secKey);
 var sharedSecret4 = kID.getSharedSecret(keyPair1.uniKey, keyPair2.secKey);
 
-// All the secrets generated are equivalent
 ```
 
 
@@ -208,8 +207,8 @@ Encrypts a the given message using a precomputed sharedSecret.
 Example:
 
 ```js
-var k1 = kID.gen();
-var k2 = kID.gen();
+var k1 = kID.goKep();
+var k2 = kID.goKep();
 
 var signKey1 = k1.secret.signKey;
 var signKey2 = k2.secret.signKey;
