@@ -181,7 +181,7 @@ test("kID.decryptMessage(theirKVKey, myKSigKey", function(t) {
     var sharedSecret3To1 = kID.getSharedSecret(keyPair3.publicKey, keyPair1.secretKey);
 
     var message = "Hello World!!";
-    var kNonce = kID.getNonce();
+    var kNonce = kID.getKNonce();
 
     var encryptedMessage = kID.encryptMessage(message, kNonce, sharedSecret1To2);
     var decryptedMessage = kID.decryptMessage(encryptedMessage, kNonce, sharedSecret2To1);
